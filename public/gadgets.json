@@ -1,0 +1,114 @@
+[
+    {
+      "product_id": 1,
+      "product_title": "UltraBook Pro 15",
+      "product_image": "https://i.ibb.co.com/N68wrtX/z6jpeg.jpg",
+      "category": "Laptops",
+      "price": 899,
+      "description": "High-performance laptop with a sleek design.",
+      "specification": ["16GB RAM", "512GB SSD", "Intel i7"],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+        "product_id": 2,
+        "product_title": "SmartWatch S9",
+        "product_image": "https://i.ibb.co.com/m6Nzw7H/w1.jpg",
+        "category": "Smart Watches",
+        "price": 249,
+        "description": "Premium smartwatch with advanced health tracking.",
+        "specification": ["ECG Monitor", "Sleep Tracking", "Waterproof"],
+        "availability": false,
+        "rating": 4.6
+      },
+    {
+      "product_id": 3,
+      "product_title": "Convertible Tablet",
+      "product_image": "https://i.ibb.co.com/PZKmBsZ/z4.jpg",
+      "category": "Laptops",
+      "price": 599,
+      "description": "2-in-1 tablet and laptop with touchscreen.",
+      "specification": ["8GB RAM", "256GB SSD", "Intel i5"],
+      "availability": false,
+      "rating": 4.2
+    },
+    {
+      "product_id": 4,
+      "product_title": "Portable Office PC",
+      "product_image": "https://i.ibb.co.com/0CqsNf5/z3jpeg.jpg",
+      "category": "Laptops",
+      "price": 749,
+      "description": "Lightweight office PC with efficient performance.",
+      "specification": ["16GB RAM", "512GB SSD", "Intel i5"],
+      "availability": true,
+      "rating": 4.3
+    },
+    {
+      "product_id": 5,
+      "product_title": "All-in-One Desktop",
+      "product_image": "https://i.ibb.co.com/VTSSLBy/z2.jpg",
+      "category": "Laptops",
+      "price": 1099,
+      "description": "All-in-one desktop with large display and powerful features.",
+      "specification": ["32GB RAM", "1TB HDD", "Intel i7"],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": 6,
+      "product_title": "High-Resolution Monitor",
+      "product_image": "https://i.ibb.co.com/SyB7hCx/z1.png",
+      "category": "Laptops",
+      "price": 299,
+      "description": "27-inch monitor with 4K resolution.",
+      "specification": ["4K UHD", "IPS Panel", "75Hz Refresh Rate"],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": 7,
+      "product_title": "Smartphone Z9",
+      "product_image": "https://i.ibb.co.com/Z8hJFv6/p1.jpg",
+      "category": "Phones",
+      "price": 499,
+      "description": "High-performance smartphone with excellent camera.",
+      "specification": ["128GB Storage", "12MP Camera", "4000mAh Battery"],
+      "availability": true,
+      "rating": 4.4
+    },
+    {
+      "product_id": 8,
+      "product_title": "Smartphone Y7",
+      "product_image": "shttps://i.ibb.co.com/B2kff1t/p2.jpg",
+      "category": "Phones",
+      "price": 649,
+      "description": "Mid-range smartphone with long battery life.",
+      "specification": ["64GB Storage", "16MP Camera", "5000mAh Battery"],
+      "availability": false,
+      "rating": 4.2
+    },
+    {
+      "product_id": 9,
+      "product_title": "SmartWatch X1",
+      "product_image": "https://i.ibb.co.com/KDhcb3b/w2.jpg",
+      "category": "Smart Watches",
+      "price": 199,
+      "description": "Feature-rich smartwatch with fitness tracking.",
+      "specification": ["Heart Rate Monitor", "GPS", "Bluetooth 5.0"],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+        "product_id": 10,
+        "product_title": "Gaming Laptop X",
+        "product_image": "https://i.ibb.co.com/BLkvsQd/z5.jpg",
+        "category": "Laptops",
+        "price": 1199,
+        "description": "Powerful laptop built for gaming enthusiasts.",
+        "specification": ["32GB RAM", "1TB SSD", "NVIDIA RTX 3060"],
+        "availability": true,
+        "rating": 4.7
+      }
+  
+  ]
+  
