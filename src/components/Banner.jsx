@@ -1,8 +1,8 @@
 import bannerImg from '../assets/banner.jpg';
 const Banner = () => {
     return (
-        <div className='border border-red-600'>
-            <div className="container relative w-[95%] mx-auto border border-yellow-600 bg-gray-100 ">
+        <div className='border border-red-600 absolute top-0 '>
+            <div className="container  w-[95%] mx-auto bg-gray-100 ">
                 <div className="border-[7px] bg-[#9538E2] rounded-[32px] h-[600px] text-center">
                     <div className='mx-auto w-[80%]'>
                         <h1 className='text-white text-5xl font-bold mt-12 leading-normal mb-6'>Upgrade Your Tech Accessorize with Gadget Heaven Accessories</h1>
@@ -14,7 +14,7 @@ const Banner = () => {
                         </div>
                     </div>
                 </div>
-                <div className='container mx-auto h-[500px] w-[60%] overflow-hidden absolute bottom-[-220px] left-1/2 transform -translate-x-1/2 z-10 flex items-center justify-center border-[3px] border-red-600 rounded-[32px] p-6'>
+                <div className='container bg-transparent  mx-auto h-[500px] w-[60%] overflow-hidden  mt-[-200px] transform  z-10 flex items-center justify-center border-[3px] border-red-600 rounded-[32px] p-6'>
                     <img className=' h-full w-full object-cover rounded-3xl' src={bannerImg} alt="" />
                 </div>
             </div>

@@ -1,7 +1,7 @@
 
 const Footer = () => {
     return (
-        <div className="container mx-auto border border-red-500 mt-14">
+        <div className="container mx-auto border border-red-500 ">
             <footer className="container mx-auto py-24 w-[80%] border border-red-500 ">
                 <h2 className="text-center text-3xl font-bold text-[#09080F] mb-3">Gadget Heaven</h2>
                 <p className="text-center text-base text-[#09080F99] font-medium mb-8">Leading the way in cutting-edge technology and innovation.</p>
