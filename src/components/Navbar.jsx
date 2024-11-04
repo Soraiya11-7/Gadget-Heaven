@@ -1,8 +1,9 @@
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
     return (
         <div className="container mx-auto">
-            <div className="navbar bg-base-100 container w-[80%] mx-auto border border-red-500 ">
+            <div className="navbar bg-transparent container w-[80%] mx-auto border border-red-500 ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -21,22 +22,22 @@ const Navbar = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                            <Navbar to='/'>Home</Navbar>
-                            <Navbar to='/statistics'>Statistics</Navbar>
-                            <Navbar to='/dashboard'>Dashboard</Navbar>
-                            <Navbar to='/extra'>Extra</Navbar>
+                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow  ">
+                            <NavLink to='/'>Home</NavLink>
+                            <NavLink to='/statistics'>Statistics</NavLink>
+                            <NavLink to='/dashboard'>Dashboard</NavLink>
+                            <NavLink to='/extra'>Extra</NavLink>
 
                         </ul>
                     </div>
                     <h2 className="text-xl font-bold text-[#0B0B0B]">Gadget Heaven</h2>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
-                        <Navbar to='/'>Home</Navbar>
-                        <Navbar to='/statistics'>Statistics</Navbar>
-                        <Navbar to='/dashboard'>Dashboard</Navbar>
-                        <Navbar to='/extra'>Extra</Navbar>
+                    <ul className="menu menu-horizontal px-1 text-[#0B0B0BB3] text-base font-medium">
+                       <NavLink className={`mr-3`} to='/'>Home</NavLink>
+                        <NavLink className={`mr-3`} to='/statistics'>Statistics</NavLink>
+                        <NavLink className={`mr-3`} to='/dashboard'>Dashboard</NavLink>
+                        <NavLink className={`mr-3`} to='/extra'>Extra</NavLink>
                     </ul>
                 </div>
                 <div className="navbar-end">

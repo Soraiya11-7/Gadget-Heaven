@@ -7,10 +7,12 @@ const MianLayout = () => {
         <div>
             {/* Navbar */}
             <Navbar></Navbar>
+
             {/* Dynamic section */}
             <div className="min-h-[calc(100vh-578px)]">
                 <Outlet />
             </div>
+            
             {/* Footer */}
             <Footer></Footer>
         </div>
