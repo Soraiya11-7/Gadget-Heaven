@@ -11,39 +11,48 @@ import {
   useLocation,
 } from "react-router-dom";
 import ErrorPage from './components/ErrorPage.jsx';
-import About from './components/About.jsx';
 import MianLayout from './layouts/MianLayout.jsx';
 import Home from './pages/Home.jsx';
 import Statistics from './pages/Statistics.jsx';
 import Dashboard from './pages/Dashboard.jsx';
 import Extra from './pages/Extra.jsx';
+import AllGadgets from './components/AllGadgets.jsx';
+import ShowCategories from './components/ShowCategories.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    // errorElement:<ErrorPage></ErrorPage>,
-    element:<MianLayout></MianLayout> ,
-    
+    errorElement: <ErrorPage></ErrorPage>,
+    element: <MianLayout></MianLayout>,
+
     children: [
       {
         path: "/",
-        element:<Home></Home>,
+        element: <Home></Home>,
+        loader: () => fetch('../categories.json'),
+        children: [
+          {
+            path: "/category/:category",
+            element: <ShowCategories></ShowCategories>,
+            loader: () => fetch('../gadgets.json'),
+          },
+        ],
       },
       {
         path: "/statistics",
-        element:<Statistics></Statistics>,
+        element: <Statistics></Statistics>,
       },
       {
         path: "/dashboard",
-        element:<Dashboard></Dashboard>,
+        element: <Dashboard></Dashboard>,
       },
       {
         path: "/extra",
-        element:<Extra></Extra>,
+        element: <Extra></Extra>,
       },
     ]
   },
- 
+
 ]);
 
 

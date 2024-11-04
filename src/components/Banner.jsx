@@ -1,10 +1,10 @@
 import bannerImg from '../assets/banner.jpg';
 const Banner = () => {
     return (
-        <div className='border border-red-600 absolute top-0 '>
-            <div className="container  w-[95%] mx-auto bg-gray-100 ">
-                <div className="border-[7px] bg-[#9538E2] rounded-[32px] h-[600px] text-center">
-                    <div className='mx-auto w-[80%]'>
+        <div className='border border-red-600 '>
+            <div className="container w-[95%] mx-auto ">
+                <div className="border-[7px] bg-[#9538E2]  rounded-[32px] h-[650px] text-center">
+                    <div className='mx-auto w-[70%] mt-[100px]'>
                         <h1 className='text-white text-5xl font-bold mt-12 leading-normal mb-6'>Upgrade Your Tech Accessorize with Gadget Heaven Accessories</h1>
                         <p className='text-sm font-normal mb-8 text-white w-[60%] mx-auto'>
                             Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!

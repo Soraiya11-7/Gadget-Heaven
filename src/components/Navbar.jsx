@@ -4,8 +4,8 @@ const Navbar = () => {
     const location = useLocation();
     const isHomePage = location.pathname === '/';
     return (
-        <div className={`container w-[95%] mx-auto z-20 ${isHomePage ? 'bg-transparent z-50 absolute rounded-t-[32px]' : 'bg-white'}`}>
-            <div className={`navbar container w-[80%] mx-auto border border-red-500 `}>
+        <div className={`container mx-auto z-20 ${isHomePage ? 'bg-transparent z-50 absolute ml-[4.8%] ' : 'bg-white'}`}>
+            <div className={`navbar container w-[80%] mx-auto border border-red-500  `}>
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
