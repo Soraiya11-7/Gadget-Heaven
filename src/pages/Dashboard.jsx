@@ -35,7 +35,7 @@ const Dashboard = () => {
     const [carts, setCarts] = useState([]);
     const [wishCard, setWishCard] = useState([]);
     const [isActive, setIsActive] = useState(true);
-
+    const [cost, setCost] = useState(0);
  
     const handleShowCards = (value) => {
         if (value === 'Carts') {
@@ -48,14 +48,25 @@ const Dashboard = () => {
     useEffect(() => {
         const allCarts = getAllCarts();
         setCarts(allCarts);
+        const totalCost = allCarts.reduce((acc, cart) => acc + cart.price, 0);
+        setCost(totalCost);
         const allWishCard = getAllWishList();
         setWishCard(allWishCard);
     }, [])
 
-    const handleRemove = id =>{
+
+     const removeAllData = () =>{
+        setCarts([]);
+        setCost(0);
+        setCart(0);
+     }
+    const handleRemove = (id,price) =>{
+        console.log(price,cost);
         removeCart(id);
         const allCarts = getAllCarts();
         setCarts(allCarts);
+        // const totalCost = allCarts.reduce((acc, cart) => cart - cart.price, 0);
+        setCost(cost - price );
         setCart(allCarts.length)
 
     }
@@ -71,7 +82,6 @@ const Dashboard = () => {
 
 
     const handleSortByCost = (sortBy) =>{
-        
         const sorted = [...carts].sort((a,b) => b.price - a.price)
         setCarts(sorted);
     }
@@ -104,8 +114,8 @@ const Dashboard = () => {
                             </div>
                             <div className="flex justify-between items-center">
                                 <div><button onClick={() =>handleSortByCost('price')} className="btn">Sort By Costing Des</button></div>
-                                <div><button className="btn">Total Cart</button></div>
-                                <div><button className="btn">purchase</button></div>
+                                <div><button className="btn">Total Cost :{cost}</button></div>
+                                <div><button onClick={removeAllData} className="btn">purchase</button></div>
                             </div>
                         </div>
 

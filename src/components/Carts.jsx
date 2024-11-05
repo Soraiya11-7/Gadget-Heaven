@@ -18,7 +18,7 @@ const Carts = ({ card ,handleRemove}) => {
                     <h2>Value: ${price}</h2>
                     {/* <button className="btn">Add to Card</button> */}
                 </div>
-                <div className="absolute z-10  right-4 top-3 text-right"><button onClick={() =>handleRemove(product_id)} className=" text-red-600 text-4xl font-thin"> <TiDeleteOutline /></button></div>
+                <div className="absolute z-10  right-4 top-3 text-right"><button onClick={() =>handleRemove(product_id,price)} className=" text-red-600 text-4xl font-thin"> <TiDeleteOutline /></button></div>
             </div> 
             
         </div>
