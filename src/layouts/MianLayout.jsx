@@ -2,12 +2,16 @@ import { Outlet } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { createContext, useState } from "react";
+import { getAllCarts, getAllWishList } from "../utilities";
 
-export const Cart = createContext(0);
-export const Wishlist = createContext(0);
+const allCart = getAllCarts();
+const allWishData = getAllWishList();
+// console.log(allCart.length);
+export const Cart = createContext(allCart.length);
+export const Wishlist = createContext(allWishData.length);
 const MianLayout = () => {
-    const [cart, setCart] = useState(0);
-    const [wishlist, setWishlist] = useState(0);
+    const [cart, setCart] = useState(allCart.length);
+    const [wishlist, setWishlist] = useState(allWishData.length);
     return (
       <Cart.Provider value={[cart, setCart]}>
         <Wishlist.Provider value={[wishlist, setWishlist]}>

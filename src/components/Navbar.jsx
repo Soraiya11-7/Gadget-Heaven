@@ -9,7 +9,7 @@ const Navbar = () => {
     const location = useLocation();
     const isHomePage = location.pathname === '/';
     return (
-        <div className={`container mx-auto z-20 ${isHomePage ? 'bg-transparent z-50 absolute ml-[4.8%] ' : 'bg-white'}`}>
+        <div className={`container mx-auto z-20 ${isHomePage ? 'bg-transparent z-50 absolute  ' : 'bg-white'}`}>
             <div className={`navbar container w-[80%] mx-auto border border-red-500  `}>
                 <div className="navbar-start">
                     <div className="dropdown">
