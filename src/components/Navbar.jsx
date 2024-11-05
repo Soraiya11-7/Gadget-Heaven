@@ -1,6 +1,11 @@
-import { NavLink, useLocation } from "react-router-dom";
+import { useContext } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { Cart, Wishlist } from "../layouts/MianLayout";
+
 
 const Navbar = () => {
+    const [cart, setCart] = useContext(Cart);
+    const [wishlist, setWishlist] = useContext(Wishlist);
     const location = useLocation();
     const isHomePage = location.pathname === '/';
     return (
@@ -43,7 +48,8 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    <Link className="btn">{cart > 0 ? `Cart - ${cart}` : 'Cart'}</Link>
+                    <Link className="btn">{wishlist > 0 ? `wishlist - ${wishlist}` : 'wishlist'}</Link>
                 </div>
             </div>
         </div>

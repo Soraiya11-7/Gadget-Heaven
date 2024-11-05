@@ -4,8 +4,11 @@ import Banner from "../components/Banner";
 import Categories from "../components/Categories";
 import ShowCategories from "../components/ShowCategories";
 import Heading from "../components/Heading";
+import { createContext, useState } from "react";
 
+export const AllCards = createContext(false);
 const Home = () => {
+    const [showAll, setShowAll] = useState(false); 
     const categories = useLoaderData();
     // console.log(categories.category);
     return (
@@ -13,11 +16,13 @@ const Home = () => {
             <Banner></Banner>
             <Heading></Heading>
             {/* <AllGadgets></AllGadgets> */}
-
-            <div className=" container w-[80%] mx-auto flex justify-between items-center gap-5">
+            <AllCards.Provider value={[showAll, setShowAll]}>
+            <div className=" container w-[80%] mx-auto flex justify-between gap-5">
                 <Categories categories={categories}></Categories>
                 <Outlet />
             </div>
+           </AllCards.Provider>
+            
 
 
 

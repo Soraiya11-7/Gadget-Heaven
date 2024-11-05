@@ -18,6 +18,7 @@ import Dashboard from './pages/Dashboard.jsx';
 import Extra from './pages/Extra.jsx';
 import AllGadgets from './components/AllGadgets.jsx';
 import ShowCategories from './components/ShowCategories.jsx';
+import Details from './components/Details.jsx';
 
 const router = createBrowserRouter([
   {
@@ -32,11 +33,26 @@ const router = createBrowserRouter([
         loader: () => fetch('../categories.json'),
         children: [
           {
+            path: "/",
+            element: <ShowCategories></ShowCategories>,
+            loader: () => fetch('../gadgets.json'),
+          },
+          {
             path: "/category/:category",
             element: <ShowCategories></ShowCategories>,
             loader: () => fetch('../gadgets.json'),
           },
+          {
+            path: "/category/all",
+            element: <ShowCategories></ShowCategories>,
+            loader: () => fetch('../gadgets.json'),
+          },
         ],
+      },
+      {
+        path: "/card/:id",
+        element: <Details></Details>,
+        loader: () => fetch('../gadgets.json'),
       },
       {
         path: "/statistics",
