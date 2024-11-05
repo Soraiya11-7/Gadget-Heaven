@@ -1,5 +1,8 @@
+import { useNavigate } from 'react-router-dom';
 import bannerImg from '../assets/banner.jpg';
+
 const Banner = () => {
+    const navigate = useNavigate();
     return (
         <div className='border border-red-600 '>
             <div className="container w-[95%] mx-auto ">
@@ -10,7 +13,7 @@ const Banner = () => {
                             Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!
                         </p>
                         <div className='bg-white rounded-[32px] inline-block'>
-                            <button className='rounded-[32px] bg-white text-xl font-bold text-[#9538E2] py-3.5 px-7 shadow-custom-inset'>Shop Now</button>
+                            <button onClick={() => navigate('/dashboard')} className='rounded-[32px] bg-white text-xl font-bold text-[#9538E2] py-3.5 px-7 shadow-custom-inset'>Shop Now</button>
                         </div>
                     </div>
                 </div>
