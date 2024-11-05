@@ -1,15 +1,17 @@
-import {  useEffect, useState } from "react";
+import {  useContext, useEffect, useState } from "react";
 // import { useLocation } from "react-router-dom";
-import { getAllCarts, getAllWishList } from "../utilities";
-// import { Cart, Wishlist } from "../layouts/MianLayout";
+import { getAllCarts, getAllWishList, removeCart, removeWishCards } from "../utilities";
 import Carts from "../components/Carts";
-import Wishlist from "../components/Wishlist";
+// import Wishlist from "../components/WishlistAllCards";
+import { Cart, Wishlist} from "../layouts/MianLayout";
+import WishlistAllCards from "../components/WishlistAllCards";
 
 
 const Dashboard = () => {
     // const notify = (product_title) => toast.success(`"${product_title}"  Item successfully added to the cart!`);
 
-    // const [cart, setCart] = useContext(Cart);
+    const [cart, setCart] = useContext(Cart);
+    const [wishlist, setWishlist] = useContext(Wishlist);
     // console.log(cart);
 
     // const data = useLoaderData();
@@ -34,7 +36,7 @@ const Dashboard = () => {
     const [wishCard, setWishCard] = useState([]);
     const [isActive, setIsActive] = useState(true);
 
-
+ 
     const handleShowCards = (value) => {
         if (value === 'Carts') {
             setIsActive(true);
@@ -49,6 +51,24 @@ const Dashboard = () => {
         const allWishCard = getAllWishList();
         setWishCard(allWishCard);
     }, [])
+
+    const handleRemove = id =>{
+        removeCart(id);
+        const allCarts = getAllCarts();
+        setCarts(allCarts);
+        setCart(allCarts.length)
+
+    }
+
+    const handleRemoveFromWishList = id =>{
+        removeWishCards(id);
+        const allWishCard = getAllWishList();
+        setWishCard(allWishCard);
+        setWishlist(allWishCard.length)
+
+    }
+
+
 
     const handleSortByCost = (sortBy) =>{
         
@@ -93,7 +113,7 @@ const Dashboard = () => {
                         <div>
                             <div className="border border-red-600">
                                 {
-                                    carts.map((card,i) => <Carts key={i} card={card}></Carts>)
+                                    carts.map((card,i) => <Carts key={i} card={card} handleRemove={handleRemove}></Carts>)
                                 }
                             </div>
 
@@ -108,7 +128,7 @@ const Dashboard = () => {
                         <div>
                         <div className="border border-red-600">
                                 {
-                                    wishCard.map((card,i) => <Wishlist key={i} card={card}></Wishlist>)
+                                    wishCard.map((card,i) => <WishlistAllCards key={i} card={card} handleRemoveFromWishList={handleRemoveFromWishList}></WishlistAllCards>)
                                 }
                             </div>
                         </div>

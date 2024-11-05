@@ -1,7 +1,7 @@
 // import { useNavigate } from "react-router-dom";
 import { TiDeleteOutline } from "@react-icons/all-files/ti/TiDeleteOutline";
 
-const Wishlist = ({card}) => {
+const WishlistAllCards = ({card,handleRemoveFromWishList}) => {
     const { product_id, product_title, product_image, category, price, description, rating, specification, availability } = card || {}
     // const navigate = useNavigate();
     return (
@@ -18,11 +18,11 @@ const Wishlist = ({card}) => {
                     <h2>Value: ${price}</h2>
                     <button className="btn">Add to Card</button>
                 </div>
-                <div className="absolute z-10  right-4 top-3 text-right"><button className=" text-red-600 text-4xl font-thin"> <TiDeleteOutline /></button></div>
+                <div className="absolute z-10  right-4 top-3 text-right"><button onClick={() =>handleRemoveFromWishList(product_id)} className=" text-red-600 text-4xl font-thin"> <TiDeleteOutline /></button></div>
             </div> 
             
         </div>
     );
 };
 
-export default Wishlist;
+export default WishlistAllCards;

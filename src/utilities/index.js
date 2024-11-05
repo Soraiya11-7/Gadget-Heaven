@@ -27,6 +27,15 @@ const addCart = (card) => {
 
 }
 
+// remove a card from local storage
+const removeCart = (id) =>{
+    const carts = getAllCarts();
+    const remainingCarts = carts.filter(card => card.product_id != id)
+    localStorage.setItem('Carts', JSON.stringify(remainingCarts));
+    alert('successfully removed')
+
+}
+
 // ...............................WishList...................................................
 // get all wishlist card from local storage
 const getAllWishList = () =>{
@@ -54,6 +63,13 @@ const addWishList = (card) => {
 
 
 // remove a card from local storage
+const removeWishCards = (id) =>{
+    const wishLists = getAllWishList();
+    const remainingCarts = wishLists.filter(card => card.product_id != id)
+    localStorage.setItem('WishLists', JSON.stringify(remainingCarts));
+    // alert('successfully removed')
+
+}
 
 
-export {addCart,addWishList, getAllCarts,getAllWishList}
+export {addCart,addWishList, getAllCarts,getAllWishList,removeCart,removeWishCards}

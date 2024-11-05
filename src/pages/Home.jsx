@@ -22,10 +22,6 @@ const Home = () => {
                 <Outlet />
             </div>
            </AllCards.Provider>
-            
-
-
-
         </div>
     );
 };
