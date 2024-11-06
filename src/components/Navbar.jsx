@@ -68,8 +68,8 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <NavLink className={`flex items-center bg-white px-1.5 py-2 rounded-full text-base mr-2 ${isHomePage ? ' border-none' : 'border'}`}><AiOutlineShoppingCart /><sup className="text-xs">{cart}</sup></NavLink>
-                    <NavLink className={`flex items-center bg-white px-1.5 py-2 rounded-full text-base mr-2 ${isHomePage ? ' border-none' : 'border'}`}><IoHeartOutline /><sup className="text-xs">{wishlist}</sup></NavLink>
+                    <button className={`flex items-center bg-white px-1.5 py-2 rounded-full text-base mr-2 ${isHomePage ? ' border-none' : 'border'}`}><AiOutlineShoppingCart /><sup className="text-xs">{cart}</sup></button>
+                    <button className={`flex items-center bg-white px-1.5 py-2 rounded-full text-base mr-2 ${isHomePage ? ' border-none' : 'border'}`}><IoHeartOutline /><sup className="text-xs">{wishlist}</sup></button>
                 </div>
             </div>
         </div>

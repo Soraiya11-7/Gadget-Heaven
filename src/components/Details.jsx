@@ -56,7 +56,7 @@ const Details = () => {
             <div className="container mx-auto bg-[#9538E2] w-full h-[430px]">
                 <div className="container w-[80%] mx-auto pt-8 text-center">
                     <h2 className="text-white font-bold text-3xl mb-4">Product Details</h2>
-                    <p className="text-base font-normal w-[60%] text-center mx-auto text-white">Discover this must-have gadget, designed to elevate your experience with its innovative features and sleek design!</p>
+                    <p className="text-base font-normal w-[55%] text-center mx-auto text-white">Discover this must-have gadget, designed to elevate your experience with its innovative features and sleek design!</p>
                 </div>
             </div>
             <div className='container bg-transparent mx-auto  w-[60%] overflow-hidden  mt-[-250px] transform  z-10 flex items-center justify-center border-[3px] border-white rounded-[24px] p-8 bg-white mb-20'>
@@ -88,17 +88,17 @@ const Details = () => {
 
                         <div className="flex items-center gap-5">
                             <div>
-                                <button onClick={() => handleCart(card)} className="text-white rounded-[32px] py-4 px-5 text-lg font-bold shadow-md bg-[#9538E2] flex items-center gap-2">Add To Card <AiOutlineShoppingCart/> </button>
+                                <button onClick={() => handleCart(card)} className="text-white rounded-[32px] py-4 px-5 text-lg font-bold shadow-md bg-[#9538E2] flex items-center gap-2">Add To Card <AiOutlineShoppingCart /> </button>
                             </div>
                             <div>
                                 <button disabled={IsWish} className={
-                        `py-4 px-5 rounded-full ${IsWish ? ' text-black border-none' : 'border'}`
-                    }
+                                    `py-4 px-5 rounded-full ${IsWish ? ' text-black border-none' : 'border'}`
+                                }
                                     onClick={() => handleWishList(card)} > {!IsWish ? (
                                         <IoHeartOutline className="text-2xl" />
-                                      ) : (
+                                    ) : (
                                         <FaHeart className="text-2xl" />
-                                      )}</button>
+                                    )}</button>
                             </div>
                         </div>
                         <Toaster />
