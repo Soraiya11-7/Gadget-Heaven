@@ -1,7 +1,7 @@
 
 const Statistics = () => {
     return (
-        <div>
+        <div className="container w-[80%] mx-auto">
             <h2>Stat...........</h2>
         </div>
     );

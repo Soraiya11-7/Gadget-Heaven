@@ -32,7 +32,7 @@ const removeCart = (id) =>{
     const carts = getAllCarts();
     const remainingCarts = carts.filter(card => card.product_id != id)
     localStorage.setItem('Carts', JSON.stringify(remainingCarts));
-    alert('successfully removed')
+    // alert('successfully removed')
 
 }
 
