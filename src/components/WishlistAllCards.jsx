@@ -18,7 +18,7 @@ const WishlistAllCards = ({card,handleRemoveFromWishList}) => {
                     <h2 className="text-xl text-[#09080FCC] font-semibold mb-4">Price: $ {price} </h2>
                     <button className="text-white rounded-[32px] py-3 px-6 text-lg font-medium  bg-[#9538E2] shadow-lg">Add to Card</button>
                 </div>
-                <div className="absolute z-10  right-16 top-8 text-right"><button onClick={() => handleRemove(product_id, price)} className=" text-red-600 text-4xl font-thin"> <TiDeleteOutline /></button></div>
+                <div className="absolute z-10  right-16 top-8 text-right"><button onClick={() => handleRemoveFromWishList(product_id)} className=" text-red-600 text-4xl font-thin"> <TiDeleteOutline /></button></div>
             </div> 
             
         </div>
