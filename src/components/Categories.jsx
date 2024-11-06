@@ -18,6 +18,7 @@ const Categories = ({ categories }) => {
 
     const handleCardView = () => {
         setActive(true);
+        setActiveItem('')
         setShowAll(true);
         navigate('/category/all');
     }

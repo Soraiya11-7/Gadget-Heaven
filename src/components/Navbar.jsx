@@ -41,7 +41,7 @@ const Navbar = () => {
                             } to='/dashboard'>Dashboard</NavLink>
                             <NavLink className={({ isActive }) =>
                                 isActive ? ' text-[#9538E2]' : ' text-[#0B0B0BB3]'
-                            } to='/extra'>Extra</NavLink>
+                            } to='/extra'>Best in Stock</NavLink>
 
                         </ul>
                     </div>
@@ -60,7 +60,7 @@ const Navbar = () => {
                         } to='/dashboard'>Dashboard</NavLink>
                         <NavLink className={({ isActive }) =>
                             `${isActive ? 'mr-3 text-[#9538E2]' : 'mr-3 text-[#0B0B0BB3]'} ${isHomePage ? 'text-white' : 'text-[#0B0B0BB3]'}`
-                        } to='/extra'>Extra</NavLink>
+                        } to='/extra'>Best in Stock</NavLink>
                     </ul>
                 </div>
                 <div className="navbar-end">
