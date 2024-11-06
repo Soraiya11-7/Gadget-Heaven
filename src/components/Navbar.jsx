@@ -30,25 +30,41 @@ const Navbar = () => {
                         <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow  ">
-                            <NavLink to='/'>Home</NavLink>
-                            <NavLink to='/statistics'>Statistics</NavLink>
-                            <NavLink to='/dashboard'>Dashboard</NavLink>
-                            <NavLink to='/extra'>Extra</NavLink>
+                            <NavLink to='/' className={({ isActive }) =>
+                                isActive ? ' text-[#9538E2]' : ' text-[#0B0B0BB3]'
+                            }>Home</NavLink>
+                            <NavLink className={({ isActive }) =>
+                                isActive ? ' text-[#9538E2]' : ' text-[#0B0B0BB3]'
+                            } to='/statistics'>Statistics</NavLink>
+                            <NavLink className={({ isActive }) =>
+                                isActive ? ' text-[#9538E2]' : ' text-[#0B0B0BB3]'
+                            } to='/dashboard'>Dashboard</NavLink>
+                            <NavLink className={({ isActive }) =>
+                                isActive ? ' text-[#9538E2]' : ' text-[#0B0B0BB3]'
+                            } to='/extra'>Extra</NavLink>
 
                         </ul>
                     </div>
-                    <h2 className="text-xl font-bold text-[#0B0B0B]">Gadget Heaven</h2>
+                    <h2 className={`text-xl font-bold text-[#0B0B0B] ${isHomePage ? 'text-white  ' : 'text-[#0B0B0B] '}`}>Gadget Heaven</h2>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 text-[#0B0B0BB3] text-base font-medium">
-                       <NavLink className={`mr-3`} to='/'>Home</NavLink>
-                        <NavLink className={`mr-3`} to='/statistics'>Statistics</NavLink>
-                        <NavLink className={`mr-3`} to='/dashboard'>Dashboard</NavLink>
-                        <NavLink className={`mr-3`} to='/extra'>Extra</NavLink>
+                        <NavLink className={({ isActive }) =>
+                            isActive ? 'mr-3 text-white' : 'mr-3 text-[#0B0B0BB3]'
+                        } to='/'>Home</NavLink>
+                        <NavLink className={({ isActive }) =>
+                            `${isActive ? 'mr-3 text-[#9538E2]' : 'mr-3 text-[#0B0B0BB3]'} ${isHomePage ? 'text-white' : 'text-[#0B0B0BB3]'}`
+                        } to='/statistics'>Statistics</NavLink>
+                        <NavLink className={({ isActive }) =>
+                            `${isActive ? 'mr-3 text-[#9538E2]' : 'mr-3 text-[#0B0B0BB3]'} ${isHomePage ? 'text-white' : 'text-[#0B0B0BB3]'}`
+                        } to='/dashboard'>Dashboard</NavLink>
+                        <NavLink className={({ isActive }) =>
+                            `${isActive ? 'mr-3 text-[#9538E2]' : 'mr-3 text-[#0B0B0BB3]'} ${isHomePage ? 'text-white' : 'text-[#0B0B0BB3]'}`
+                        } to='/extra'>Extra</NavLink>
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link className="btn">{cart > 0 ? `Cart - ${cart}` : 'Cart'}</Link>
+                    <NavLink to='/dashboard' className="btn">{cart > 0 ? `Cart - ${cart}` : 'Cart'}</NavLink>
                     <Link className="btn">{wishlist > 0 ? `wishlist - ${wishlist}` : 'wishlist'}</Link>
                 </div>
             </div>

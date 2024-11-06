@@ -65,6 +65,7 @@ const router = createBrowserRouter([
       {
         path: "/extra",
         element: <Extra></Extra>,
+        loader: () => fetch('../gadgets.json'),
       },
     ]
   },

@@ -4,7 +4,7 @@ import bannerImg from '../assets/banner.jpg';
 const Banner = () => {
     const navigate = useNavigate();
     return (
-        <div className='border border-red-600 '>
+        <div className='border border-red-600 top-0 '>
             <div className="container w-[95%] mx-auto ">
                 <div className="border-[7px] bg-[#9538E2]  rounded-[32px] h-[650px] text-center">
                     <div className='mx-auto w-[70%] mt-[100px]'>

@@ -3,20 +3,13 @@ import Cards from "./Cards";
 import { createContext, useContext, useEffect, useState } from "react";
 import { AllCards } from "../pages/Home";
 
-// export const AllData = createContext();
-// export const AllCards = createContext(() => {});
+
 const ShowCategories = () => {
     const data = useLoaderData()
     const { category } = useParams();
     const [cards, setCards] = useState([]);
     const [showAll, setShowAll] = useContext(AllCards); 
     console.log(showAll);
-
-    // const handleData = () => {
-    //     console.log("Showing all items");
-    //     setShowAll(true); 
-    //     console.log("Showing all items");
-    // }
 
     useEffect(() => {
         console.log("Show all status:", showAll);  
@@ -36,7 +29,7 @@ const ShowCategories = () => {
     // console.log( data);
     return (
 
-        <div className="border border-red-600 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+        <div className="border border-red-600 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
         {
             cards.map((card) => <Cards key={card.product_id} card={card}></Cards>)
         }
