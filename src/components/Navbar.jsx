@@ -1,6 +1,10 @@
 import { useContext } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { Cart, Wishlist } from "../layouts/MianLayout";
+// import { AiOutlineShoppingCart } from "react-icons/ai";
+import { AiOutlineShoppingCart } from "@react-icons/all-files/ai/AiOutlineShoppingCart";
+import { IoHeartOutline } from "@react-icons/all-files/io5/IoHeartOutline";
+// import { IoHeartOutline } from "react-icons/io5";
 
 
 const Navbar = () => {
@@ -9,8 +13,8 @@ const Navbar = () => {
     const location = useLocation();
     const isHomePage = location.pathname === '/';
     return (
-        <div className={`container mx-auto z-20 ${isHomePage ? 'bg-transparent z-50 absolute  ' : 'bg-white'}`}>
-            <div className={`navbar container w-[80%] mx-auto border border-red-500  `}>
+        <div className={`container mx-auto z-20 mt-5 ${isHomePage ? 'bg-transparent z-50 absolute  ' : 'bg-white'}`}>
+            <div className={`navbar container w-[80%] mx-auto  `}>
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -50,7 +54,7 @@ const Navbar = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 text-[#0B0B0BB3] text-base font-medium">
                         <NavLink className={({ isActive }) =>
-                            isActive ? 'mr-3 text-white' : 'mr-3 text-[#0B0B0BB3]'
+                            isActive ? 'mr-3 text-white shadow-md' : 'mr-3 text-[#0B0B0BB3]'
                         } to='/'>Home</NavLink>
                         <NavLink className={({ isActive }) =>
                             `${isActive ? 'mr-3 text-[#9538E2]' : 'mr-3 text-[#0B0B0BB3]'} ${isHomePage ? 'text-white' : 'text-[#0B0B0BB3]'}`
@@ -64,8 +68,8 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <NavLink to='/dashboard' className="btn">{cart > 0 ? `Cart - ${cart}` : 'Cart'}</NavLink>
-                    <Link className="btn">{wishlist > 0 ? `wishlist - ${wishlist}` : 'wishlist'}</Link>
+                    <NavLink className={`flex items-center bg-white px-1.5 py-2 rounded-full text-base mr-2 ${isHomePage ? ' border-none' : 'border'}`}><AiOutlineShoppingCart /><sup className="text-xs">{cart}</sup></NavLink>
+                    <NavLink className={`flex items-center bg-white px-1.5 py-2 rounded-full text-base mr-2 ${isHomePage ? ' border-none' : 'border'}`}><IoHeartOutline /><sup className="text-xs">{wishlist}</sup></NavLink>
                 </div>
             </div>
         </div>

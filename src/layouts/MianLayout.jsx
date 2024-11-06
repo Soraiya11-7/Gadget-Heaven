@@ -39,7 +39,7 @@ const MianLayout = () => {
   return (
     <Cart.Provider value={[cart, setCart]}>
       <Wishlist.Provider value={[wishlist, setWishlist]}>
-        <div>
+        <div className=" bg-gray-50">
           {/* Navbar */}
           <Navbar></Navbar>
 

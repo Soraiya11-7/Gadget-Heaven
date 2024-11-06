@@ -13,7 +13,7 @@ const AllGadgets = () => {
                     <div className="border border-red-600 rounded-lg">
                         <Categories categories={categories}></Categories>
                     </div>
-                    <div className="border border-red-600 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                    <div className="border border-red-600">
                         <ShowCategories></ShowCategories>
                     </div>
 

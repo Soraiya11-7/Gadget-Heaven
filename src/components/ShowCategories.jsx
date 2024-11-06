@@ -29,7 +29,7 @@ const ShowCategories = () => {
     // console.log( data);
     return (
 
-        <div className="border border-red-600 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-20">
         {
             cards.map((card) => <Cards key={card.product_id} card={card}></Cards>)
         }

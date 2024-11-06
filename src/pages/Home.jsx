@@ -12,14 +12,14 @@ const Home = () => {
     const categories = useLoaderData();
     // console.log(categories.category);
     return (
-        <div className="bg-gray-100 mb-10">
+        <div className="bg-gray-50 mb-10">
             <Banner></Banner>
             <Heading></Heading>
             {/* <AllGadgets></AllGadgets> */}
             <AllCards.Provider value={[showAll, setShowAll]}>
             <div className=" container w-[80%] mx-auto flex justify-between gap-5">
-                <Categories categories={categories}></Categories>
-                <Outlet />
+                <div className="w-[20%]"><Categories categories={categories}></Categories></div>
+                <div className="w-[78%]"><Outlet /></div>
             </div>
            </AllCards.Provider>
         </div>

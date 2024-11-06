@@ -26,26 +26,20 @@ const Categories = ({ categories }) => {
 
     return (
         <div>
-
-            <div className="bg-white text-center p-3 rounded-lg">
-                <div className="border border-red-100">
-                    {/* <NavLink to='/category/all' 
-                    className={({ isActive }) => 
-                        `${isActive ? 'bg-teal-500' : ''}`
-                    }
-                    onClick={() => setShowAll(true)}
-                    >all</NavLink> */}
+            <div className="bg-white text-center p-6 rounded-2xl border ">
+                <div className="">
+                
                     <button className={
-                        `${active ? 'bg-teal-500 w-full' : 'bg-gray'}`
+                        `rounded-[32px] py-4 px-5 w-full text-lg ${active ? 'bg-[#9538E2] text-white font-extrabold shadow-md' : 'bg-[#09080F0D] font-medium text-[#09080F99]'}`
                     } onClick={handleCardView}>
-                        All
+                        All Product
                     </button>
                 </div>
                 {
                     categories.map((category, index) => (
-                        <div key={index} className="bg-gray-400 my-3 rounded-xl" >
-                            <button className={`w-full p-3 rounded-lg ${
-                            activeItem === category.category ? 'bg-teal-500' : 'bg-gray-400'
+                        <div key={index} className="mt-6" >
+                            <button className={`rounded-[32px] py-4 px-5 w-full text-lg ${
+                            activeItem === category.category ? 'bg-[#9538E2] text-white font-extrabold shadow-md' : 'bg-[#09080F0D] font-medium text-[#09080F99]'
                         }`} onClick={() => handleCategory(category.category) }>
                                 {category.category}
                             </button>
